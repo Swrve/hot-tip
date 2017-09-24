@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true,
+    "jest": true
+  },
+  "cache": true,
+  "cacheLocation": ".eslintcache",
+  "plugins": [
+    "babel"
+  ],
+  "extends": "eslint:recommended",
+  "rules": {
+    "indent": [2, 2]
+  }
+}

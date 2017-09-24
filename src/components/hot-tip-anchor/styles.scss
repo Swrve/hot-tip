@@ -1,0 +1,157 @@
+.hot-tip {
+  $font-size: 12px;
+  $pointer-width: 7px;
+  $pointer-length: 5px;
+  $background-color: rgba(76, 94, 108, .9);
+  $text-color: #f3f6f8;
+  $translate-x-left: calc(-100% - #{$pointer-width});
+
+  position: absolute;
+  width: 200px;
+  pointer-events: none;
+  z-index: 999;
+  transform-origin: top;
+
+  .pointer {
+    border: $pointer-width solid transparent;
+    position: absolute;
+  }
+
+  .body {
+    background-color: $background-color;
+    font-weight: 300;
+    font-size: $font-size;
+    line-height: 1.17;
+    max-width: 100%;
+    margin-top: $pointer-length;
+    color: $text-color;
+    padding: 10px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  // top & bottom only
+  &.centred {
+    margin-left: -100px;
+    text-align: center;
+
+    .pointer {
+      left: calc(50% - #{$pointer-width});
+    }
+
+    .body {
+      text-align: center;
+    }
+  }
+
+  &.left-offset {
+    margin-left: -20px;
+    text-align: left;
+
+    .pointer {
+      left: 15px;
+    }
+
+    .body {
+      min-width: 30px;
+    }
+  }
+
+  &.right-offset {
+    margin-left: -180px;
+    text-align: right;
+
+    .pointer {
+      right: 15px;
+    }
+
+    .body {
+      min-width: 30px;
+      text-align: right;
+    }
+  }
+
+  &.bottom {
+    .pointer {
+      border-bottom: $pointer-length solid $background-color;
+      top: -$pointer-width;
+    }
+  }
+
+  &.top {
+    transform: translateY(calc(-100% - #{$pointer-width}));
+
+    .pointer {
+      border-top: $pointer-length solid $background-color;
+      bottom: -$pointer-width - $pointer-length;
+    }
+  }
+
+
+  // left & right only
+  &.mid {
+    transform: translateY(-50%);
+
+    &.left {
+      transform: translate($translate-x-left, -50%);
+    }
+
+    .pointer {
+      top: calc(50% - #{$pointer-width});
+    }
+
+    .body {
+      text-align: center;
+    }
+  }
+
+  &.top-offset {
+    transform: translateY(-20px);
+
+    &.left {
+      transform: translate($translate-x-left, -20px);
+    }
+
+    .pointer {
+      top: 15px;
+    }
+
+    .body {
+      min-height: 30px;
+    }
+  }
+
+  &.bottom-offset {
+    transform: translateY(calc(-100% + 20px));
+
+    &.left {
+      transform: translate($translate-x-left, calc(-100% + 20px));
+    }
+
+    .pointer {
+      bottom: 15px;
+    }
+
+    .body {
+      min-height: 30px;
+    }
+  }
+
+  &.left {
+    text-align: right;
+
+    .pointer {
+      border-left: $pointer-length solid $background-color;
+      right: -$pointer-width - $pointer-length;
+    }
+  }
+
+  &.right {
+    margin-left: $pointer-width;
+
+    .pointer {
+      border-right: $pointer-length solid $background-color;
+      left: -$pointer-width - $pointer-length;
+    }
+  }
+}

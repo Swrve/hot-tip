@@ -1,0 +1,1 @@
+export const UPDATE_TOOLTIP = 'HOT_TIP::UPDATE_TOOLTIP'

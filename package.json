@@ -1,0 +1,47 @@
+{
+  "name": "hot-tip",
+  "version": "1.0.0",
+  "description": "A stress-free redux/react tooltip solution",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
+    "build-examples": "node_modules/.bin/webpack",
+    "serve-examples": "node_modules/.bin/webpack-dev-server"
+  },
+  "keywords": [
+    "tooltip",
+    "redux",
+    "react"
+  ],
+  "author": "adamdharrington <adamdharrington@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "domjs": "^0.3.2",
+    "eslint-plugin-babel": "^4.1.2",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "jest": "^21.1.0",
+    "node-sass": "^4.5.3",
+    "react-dom": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}
