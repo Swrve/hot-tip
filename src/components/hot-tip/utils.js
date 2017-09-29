@@ -96,3 +96,8 @@ export const getBounds = (e) => {
     clientHeight
   }
 }
+
+export default {
+  getBounds,
+  getPosition
+}

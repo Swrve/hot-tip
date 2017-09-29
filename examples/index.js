@@ -45,9 +45,25 @@ render((
         <iframe src="/examples/frame-example.html" width="100%" height="300px"/>
         <h2>{'API'}</h2>
         <p>
-          {'\
-            HotTip exposes three \
-          '}
+          {'HotTip exposes four modules: two components, a reducer and some utils. The two components are '}
+          <HotTip text="This should be a singleton at the root of your application.">
+            <em>{'HotTipRoot'}</em>
+          </HotTip>{' and '}
+          <HotTip text="This is a wrapper around anything that has a tooltip.">
+            <em>{'HotTip'}</em>
+          </HotTip>{'.'}
+        </p>
+        <p>
+          {'The reducer should be included in your redux combineReducers array, it is \
+            exported as '}
+          <HotTip text="Notice the lower-case 'h'.">
+            <em>{'hotTipReducer'}</em>
+          </HotTip>{'. '}
+          {'The HotTipRoot is connected to a data-store of this exact name so it\'s advised to use destructuring.'}
+        </p>
+        <p>
+          {'The utils just provide access to the same positioning calculations that HotTip uses in case they are \
+            useful elsewhere in an application (why not?).'}
         </p>
         <h2>{'Licence & Contribute'}</h2>
         <p>
