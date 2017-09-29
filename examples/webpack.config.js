@@ -26,6 +26,7 @@ module.exports = {
   },
   entry: {
     examples: ['./examples/index.js', './examples/styles.scss'],
+    'frame-example': ['./examples/frame-example.js', './examples/frame-example.scss'],
     hotTip: ['./src/index.js', './src/styles.scss']
   },
   output: {

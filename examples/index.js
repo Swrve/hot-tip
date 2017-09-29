@@ -4,6 +4,9 @@ import {render} from 'react-dom'
 import {HotTipRoot, HotTip} from '../src'
 import store from './store'
 
+const text = 'A piece of text.'
+const longText = ['A very long piece of text.', text, text, text, text, text, text, text, text].join(' ')
+
 render((
   <Provider store={store}>
     <div className="body">
@@ -13,18 +16,44 @@ render((
       <div className="header">
         <h1>
           {'These are examples of HotTip in action '}
-          <HotTip text="View source for the makup" position="right"><i className="fa fa-question-circle"/></HotTip>
+          <HotTip text="View source for the markup on github /examples" position="right">
+            <i className="fa fa-question-circle"/>
+          </HotTip>
         </h1>
       </div>
       <div className="examples">
-        <h2>
-          {'Positioning'}
-          <HotTip text="View source for the makup" position="right"><i className="fa fa-question-circle"/></HotTip>
-        </h2>
-        <h2>
-          {'Offsets'}
-          <HotTip text="View source for the makup" position="right"><i className="fa fa-question-circle"/></HotTip>
-        </h2>
+        <h2>{'Positioning'}</h2>
+        <p>
+          {'HotTip has four basic positions '}
+          <HotTip text="Top" position="top"><em>{'Top'}</em></HotTip>{', '}
+          <HotTip text="Left" position="left"><em>{'Left'}</em></HotTip>{', '}
+          <HotTip text="Right" position="right"><em>{'Right'}</em></HotTip>{', and '}
+          <HotTip text="Bottom (default)"><em>{'Bottom'}</em></HotTip>{'.'}
+        </p>
+        <h2>{'Extra Long tips'}</h2>
+        <p>
+          {'There is a maximum width of 200px for a tooltip. Overflow and wrapping is handled differently for each position '}
+          <HotTip text={longText} position="top"><em>{'Top'}</em></HotTip>{', '}
+          <HotTip text={longText} position="left"><em>{'Left'}</em></HotTip>{', '}
+          <HotTip text={longText} position="right"><em>{'Right'}</em></HotTip>{', and '}
+          <HotTip text={longText}><em>{'Bottom'}</em></HotTip>{'.'}
+        </p>
+        <h2>{'Position auto-adjustments'}</h2>
+        <p>
+          {'Hot Tip will do some magic to make sure your tooltips are always visible even if the target is close to a page boundary.'}
+        </p>
+        <iframe src="/examples/frame-example.html" width="100%" height="300px"/>
+        <h2>{'API'}</h2>
+        <p>
+          {'\
+            HotTip exposes three \
+          '}
+        </p>
+        <h2>{'Licence & Contribute'}</h2>
+        <p>
+          {'HotTip is on MIT so can be used anywhere. Credit is always appreciated. Fork and PR to help improve the \
+            product.'}
+        </p>
       </div>
     </div>
   </Provider>

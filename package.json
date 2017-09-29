@@ -11,8 +11,8 @@
     "test": "jest",
     "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile",
-    "build-examples": "node_modules/.bin/webpack",
-    "serve-examples": "node_modules/.bin/webpack-dev-server"
+    "examples-build": "node_modules/.bin/webpack --config=examples/webpack.config.js",
+    "examples": "node_modules/.bin/webpack-dev-server --config=examples/webpack.config.js"
   },
   "keywords": [
     "tooltip",
