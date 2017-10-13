@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/Swrve/hot-tip">
-    <img width="240" src="https://raw.githubusercontent.com/Swrve/hot-tip/examples/hot-tip.png">
+    <img width="240" src="https://github.com/Swrve/hot-tip/blob/master/examples/Hot-Tip.png?raw=true">
   </a>
   <br>
   <h1>Hot-Tip</h1>
@@ -25,8 +25,7 @@ yarn add hot-tip
 
 
 
-<center>Why Hot-Tip?</center>
-------------
+<h2 align="center">Why Hot-Tip?</h2>
 
 We weren't happy with tooltip solutions that looked like react components but under the cover used the DOM api directly (or heaven forbid jQuery).
 
@@ -40,8 +39,7 @@ We weren't happy with tooltip solutions that looked like react components but un
 
  ✅ &nbsp; Hot-Tip bundles in at 13.6kb before minification
 
-<center>Positioning</center>
-------------
+<h2 align="center">Positioning</h2>
 
 HotTip has four basic positions Top, Left, Right, and Bottom.
 Extra Long tips
@@ -52,14 +50,12 @@ Position auto-adjustments
 Hot Tip will do some magic to make sure your tooltips are always visible even if the target is close to a page boundary.
 
 
-<center>API</center>
-------------
+<h2 align="center">API</h2>
 
 HotTip exposes four modules: two components, a reducer and some utils. The two components are HotTipRoot and HotTip.
 The reducer should be included in your redux combineReducers array, it is exported as hotTipReducer. The HotTipRoot is connected to a data-store of this exact name so it's advised to use destructuring.
 The utils just provide access to the same positioning calculations that HotTip uses in case they are useful elsewhere in an application (why not?).
 
-<center>Licence & Contribute</center>
------------------------
+<h2 align="center">Licence & Contribute</h2>
 
 HotTip is on MIT so can be used anywhere. Credit is always appreciated. Fork and PR to help improve the product.
