@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "jest",
-    "compile": "babel -d lib/ src/",
+    "compile": "node_modules/.bin/webpack --config=webpack.config.js",
     "prepublish": "npm run compile",
     "examples-build": "node_modules/.bin/webpack --config=examples/webpack.config.js",
     "examples": "node_modules/.bin/webpack-dev-server --config=examples/webpack.config.js"
