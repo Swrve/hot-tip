@@ -37,5 +37,10 @@ module.exports = {
   ],
   resolve: {
     extensions: ['.scss', '.css', '.js', '.jsx']
+  },
+  externals: {
+    "react": "umd react",
+    "react-redux": "umd react-redux",
+    "redux": "umd redux"
   }
 }

@@ -1,4 +1,5 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   target: 'web',
@@ -22,6 +23,11 @@ module.exports = {
       use: [{
         loader: 'babel-loader'
       }]
+    }, {
+      test: /\.(png)$/,
+      use: [{
+        loader: 'file-loader'
+      }]
     }]
   },
   entry: {
@@ -35,8 +41,15 @@ module.exports = {
     publicPath: '/lib'
   },
   plugins: [
-    new ExtractTextPlugin('[name].style.css')
+    new ExtractTextPlugin('[name].style.css'),
+    new HtmlWebpackPlugin({
+      title: 'Hot Tip - Examples',
+      template: './examples/index.html'
+    })
   ],
+  devServer: {
+    contentBase: "./examples"
+  },
   resolve: {
     extensions: ['.scss', '.css', '.js', '.jsx']
   }

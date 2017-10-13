@@ -4,6 +4,8 @@ import {render} from 'react-dom'
 import {HotTipRoot, HotTip} from '../src'
 import store from './store'
 
+import logosrc from './Hot-Tip.png'
+
 const text = 'A piece of text.'
 const longText = ['A very long piece of text.', text, text, text, text, text, text, text, text].join(' ')
 
@@ -14,12 +16,7 @@ render((
       {/* It relies on 'connect' so it must be within a react-redux provider component */}
       <HotTipRoot/>
       <div className="header">
-        <h1>
-          {'These are examples of HotTip in action '}
-          <HotTip text="View source for the markup on github /examples" position="right">
-            <i className="fa fa-question-circle"/>
-          </HotTip>
-        </h1>
+        <img src={logosrc}/>
       </div>
       <div className="examples">
         <h2>{'Positioning'}</h2>
@@ -42,7 +39,7 @@ render((
         <p>
           {'Hot Tip will do some magic to make sure your tooltips are always visible even if the target is close to a page boundary.'}
         </p>
-        <iframe src="/examples/frame-example.html" width="100%" height="300px"/>
+        <iframe src="/frame-example.html" width="100%" height="300px"/>
         <h2>{'API'}</h2>
         <p>
           {'HotTip exposes four modules: two components, a reducer and some utils. The two components are '}
