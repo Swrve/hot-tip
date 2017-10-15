@@ -12,10 +12,14 @@
     "commonjs": true,
     "jest": true
   },
-  "cache": true,
-  "cacheLocation": ".eslintcache",
+  "globals": {
+    "expect": true,
+    "React": true
+  },
   "plugins": [
-    "babel"
+    "babel",
+    "react",
+    "import"
   ],
   "extends": "eslint:recommended",
   "rules": {

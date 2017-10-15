@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components HotTip hover 1`] = `
+<a
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  link
+</a>
+`;
+
+exports[`Components HotTip hover 2`] = `
+<a
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  link
+</a>
+`;
+
+exports[`Components HotTip renders 1`] = `
+<a
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  link
+</a>
+`;

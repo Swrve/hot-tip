@@ -4,7 +4,7 @@ import {render} from 'react-dom'
 import {HotTipRoot, HotTip} from '../src'
 import store from './store'
 
-import logosrc from './Hot-Tip.png'
+import logosrc from './hot-tip.png'
 
 const text = 'A piece of text.'
 const longText = ['A very long piece of text.', text, text, text, text, text, text, text, text].join(' ')

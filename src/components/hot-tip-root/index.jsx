@@ -1,5 +1,5 @@
 import React from 'react'
-import HotTipAnchor from '../hot-tip-anchor/component'
+import HotTipAnchor from '../hot-tip-anchor'
 
 const HotTipRoot = (props) => {
   if (props.children) {

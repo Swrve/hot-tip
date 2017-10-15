@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store HotTip Redux Actions addTooltip called with text and position 1`] = `
+Object {
+  "payload": Object {
+    "position": Object {
+      "x": 1,
+      "y": 2,
+    },
+    "text": "some text",
+    "visible": true,
+  },
+  "type": "HOT_TIP::UPDATE_TOOLTIP",
+}
+`;
+
+exports[`Store HotTip Redux Actions clearTooltip when calledcalled 1`] = `
+Object {
+  "payload": Object {
+    "visible": false,
+  },
+  "type": "HOT_TIP::UPDATE_TOOLTIP",
+}
+`;

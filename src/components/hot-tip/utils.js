@@ -1,4 +1,4 @@
-const getBottom = (bounds, force) => {
+export const getBottom = (bounds, force) => {
   const {left, top, width, height, clientWidth, clientHeight} = bounds
 
   if (!force && top + height + 40 >= clientHeight) {
@@ -18,7 +18,7 @@ const getBottom = (bounds, force) => {
   }
 }
 
-const getTop = (bounds, force) => {
+export const getTop = (bounds, force) => {
   const {top} = bounds,
     bottom = getBottom(bounds, true)
 
@@ -32,7 +32,7 @@ const getTop = (bounds, force) => {
   })
 }
 
-const getRight = (bounds, force) => {
+export const getRight = (bounds, force) => {
   const {left, top, width, height, clientWidth, clientHeight} = bounds
 
   if (!force && left + width + 200 >= clientWidth) {
@@ -52,7 +52,7 @@ const getRight = (bounds, force) => {
   }
 }
 
-const getLeft = (bounds, force) => {
+export const getLeft = (bounds, force) => {
   const {left} = bounds,
     right = getRight(bounds, force)
 
