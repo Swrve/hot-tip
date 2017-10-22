@@ -3,7 +3,8 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "modules": true
     }
   },
   "env": {
@@ -23,6 +24,9 @@
   ],
   "extends": "eslint:recommended",
   "rules": {
-    "indent": [2, 2]
+    "indent": [2, 2],
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2
   }
 }

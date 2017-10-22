@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Utils getBottom/getTop horizontal offsets getBottom Should not offset when mid is 100px from (right) edge 1`] = `
+Object {
+  "layoutClass": "centred",
+  "positionClass": "bottom",
+  "x": 700,
+  "y": 310,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getBottom Should not offset when mid is 100px from edge 1`] = `
+Object {
+  "layoutClass": "centred",
+  "positionClass": "bottom",
+  "x": 100,
+  "y": 310,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getBottom Should offset to left when < 100px from right 1`] = `
+Object {
+  "layoutClass": "right-offset",
+  "positionClass": "bottom",
+  "x": 701,
+  "y": 310,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getBottom Should offset to right when mid < 100px from left 1`] = `
+Object {
+  "layoutClass": "left-offset",
+  "positionClass": "bottom",
+  "x": 99,
+  "y": 310,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getTop Should not offset when mid is 100px from (right) edge 1`] = `
+Object {
+  "layoutClass": "centred",
+  "positionClass": "top",
+  "x": 700,
+  "y": 300,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getTop Should not offset when mid is 100px from edge 1`] = `
+Object {
+  "layoutClass": "centred",
+  "positionClass": "top",
+  "x": 100,
+  "y": 300,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getTop Should offset to left when < 100px from right 1`] = `
+Object {
+  "layoutClass": "right-offset",
+  "positionClass": "top",
+  "x": 701,
+  "y": 300,
+}
+`;
+
+exports[`Utils getBottom/getTop horizontal offsets getTop Should offset to right when mid < 100px from left 1`] = `
+Object {
+  "layoutClass": "left-offset",
+  "positionClass": "top",
+  "x": 99,
+  "y": 300,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getLeft Should not offset when vertical mid is 40px from bottom 1`] = `
+Object {
+  "layoutClass": "mid",
+  "positionClass": "left",
+  "x": 400,
+  "y": 850,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getLeft Should not offset when vertical mid is 40px from top 1`] = `
+Object {
+  "layoutClass": "mid",
+  "positionClass": "left",
+  "x": 400,
+  "y": 50,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getLeft Should offset to left when < 100px from right 1`] = `
+Object {
+  "layoutClass": "top-offset",
+  "positionClass": "left",
+  "x": 400,
+  "y": 49,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getLeft Should offset to right when mid < 100px from left 1`] = `
+Object {
+  "layoutClass": "bottom-offset",
+  "positionClass": "left",
+  "x": 400,
+  "y": 851,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getRight Should not offset when vertical mid is 40px from bottom 1`] = `
+Object {
+  "layoutClass": "mid",
+  "positionClass": "right",
+  "x": 480,
+  "y": 850,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getRight Should not offset when vertical mid is 40px from top 1`] = `
+Object {
+  "layoutClass": "mid",
+  "positionClass": "right",
+  "x": 480,
+  "y": 50,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getRight Should offset to left when < 100px from right 1`] = `
+Object {
+  "layoutClass": "top-offset",
+  "positionClass": "right",
+  "x": 480,
+  "y": 49,
+}
+`;
+
+exports[`Utils getLeft/getRight vertical offsets getRight Should offset to right when mid < 100px from left 1`] = `
+Object {
+  "layoutClass": "bottom-offset",
+  "positionClass": "right",
+  "x": 480,
+  "y": 851,
+}
+`;
+
+exports[`Utils getTop/bottom/left/right swap to opposite if too close to bounds getBottom returns top position if too close to bottom 1`] = `
+Object {
+  "bottom": Object {
+    "layoutClass": "centred",
+    "positionClass": "bottom",
+    "x": 400,
+    "y": 859,
+  },
+  "top": Object {
+    "layoutClass": "centred",
+    "positionClass": "top",
+    "x": 400,
+    "y": 850,
+  },
+}
+`;
+
+exports[`Utils getTop/bottom/left/right swap to opposite if too close to bounds getLeft returns right position if too close to left 1`] = `
+Object {
+  "left": Object {
+    "layoutClass": "mid",
+    "positionClass": "left",
+    "x": 201,
+    "y": 450,
+  },
+  "right": Object {
+    "layoutClass": "mid",
+    "positionClass": "right",
+    "x": 280,
+    "y": 450,
+  },
+}
+`;
+
+exports[`Utils getTop/bottom/left/right swap to opposite if too close to bounds getRight returns left position if too close to right 1`] = `
+Object {
+  "left": Object {
+    "layoutClass": "mid",
+    "positionClass": "left",
+    "x": 520,
+    "y": 450,
+  },
+  "right": Object {
+    "layoutClass": "mid",
+    "positionClass": "right",
+    "x": 599,
+    "y": 450,
+  },
+}
+`;
+
+exports[`Utils getTop/bottom/left/right swap to opposite if too close to bounds getTop returns bottom position if too close to top 1`] = `
+Object {
+  "bottom": Object {
+    "layoutClass": "centred",
+    "positionClass": "bottom",
+    "x": 400,
+    "y": 50,
+  },
+  "top": Object {
+    "layoutClass": "centred",
+    "positionClass": "top",
+    "x": 400,
+    "y": 41,
+  },
+}
+`;
