@@ -1,7 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  target: 'web',
+  target: 'node',
   module: {
     rules: [{
       test: /\.scss$/,
@@ -33,14 +33,14 @@ module.exports = {
     publicPath: '/lib'
   },
   plugins: [
-    new ExtractTextPlugin('[name].style.css')
+    new ExtractTextPlugin('[name].style.scss')
   ],
   resolve: {
     extensions: ['.scss', '.css', '.js', '.jsx']
   },
   externals: {
-    "react": "umd react",
-    "react-redux": "umd react-redux",
-    "redux": "umd redux"
+    "react": "react",
+    "react-redux": "react-redux",
+    "redux": "redux"
   }
 }

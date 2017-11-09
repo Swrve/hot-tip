@@ -9,7 +9,7 @@
   },
   "files": [
     "lib/hotTip.bundle.js",
-    "lib/hotTip.style.css"
+    "lib/hotTip.style.scss"
   ],
   "scripts": {
     "compile": "webpack --config=webpack.config.js",
