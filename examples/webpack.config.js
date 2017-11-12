@@ -38,13 +38,21 @@ module.exports = {
   output: {
     path: __dirname + '/lib',
     filename: '[NAME].bundle.js',
-    publicPath: '/lib'
+    publicPath: '/'
   },
   plugins: [
     new ExtractTextPlugin('[name].style.css'),
     new HtmlWebpackPlugin({
       title: 'Hot Tip - Examples',
-      template: './examples/index.html'
+      template: './examples/index.html',
+      filename: 'index.html',
+      chunks: ['examples', 'hotTip']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Hot Tip - Frame - Examples',
+      template: './examples/index.html',
+      filename: 'frame-example.html',
+      chunks: ['frame-example', 'hotTip']
     })
   ],
   devServer: {

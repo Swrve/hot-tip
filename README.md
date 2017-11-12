@@ -9,7 +9,8 @@
   <p>
 </div>
 
-<h2 align="center">Install</h2>
+Install
+---------------------------------
 
 Install with npm:
 
@@ -23,9 +24,17 @@ Install with yarn:
 yarn add hot-tip
 ```
 
+Examples
+---------------------------------
 
+The examples contains all the information here and more.
 
-<h2 align="center">Why HotTip?</h2>
+```bash
+yarn run examples
+```
+
+Why HotTip?
+---------------------------------
 
 We weren't happy with tooltip solutions that looked like react components but under the cover used the DOM api directly (or heaven forbid jQuery). HotTip
 
@@ -37,9 +46,10 @@ We weren't happy with tooltip solutions that looked like react components but un
 
  ✅ &nbsp; Positioning is responsive, if you're close to frame boundaries HotTip responds in a predictable way (see examples)
 
- ✅ &nbsp; HotTip bundles in at 13.6kb (5.7kb minified)
+ ✅ &nbsp; HotTip bundles in at about 40kb (10kb compressed)
 
-<h2 align="center">Positioning</h2>
+Positioning
+---------------------------------
 
 HotTip has four basic positions *Top*, *Left*, *Right*, and *Bottom*.
 Extra Long tips
@@ -56,7 +66,8 @@ Hot Tip will do some magic to make sure your tooltips are always visible even if
 import {utils} from 'hot-tip'
 ```
 
-<h2 align="center">API</h2>
+API
+---------------------------------
 
 HotTip exposes four modules: two components, a reducer and some utils. The two components are *HotTipRoot* and *HotTip*.
 
@@ -72,13 +83,14 @@ As the `HotTip` component is the part you'll be reaching for most regularly it i
 
 ```javascript
 import HotTip from 'hot-tip'
-<HotTip text="I'm a tooltip">hover here</HotTip>
+<HotTip tip="I'm a tooltip">hover here</HotTip>
 // or
 
 import Hover from 'hot-tip'
-<Hover text="I'm a tooltip">hover here</Hover>
+<Hover tip="I'm a tooltip">hover here</Hover>
 ```
 
-<h2 align="center">Licence & Contribute</h2>
+Licence & Contribute
+---------------------------------
 
-HotTip is on MIT so can be used anywhere. Credit is always appreciated. Fork and PR to help improve the product.
+HotTip is on MIT so can be used anywhere with almost no restrictions. Credit is always appreciated. Fork and open a pull request to help improve the package.

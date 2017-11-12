@@ -15,7 +15,7 @@
     "compile:cjs": "babel src --out-dir lib",
     "compile": "npm run compile:umd && npm run compile:cjs && npm run compile:css",
     "examples": "webpack-dev-server --config=examples/webpack.config.js",
-    "examples-build": "webpack --config=examples/webpack.config.js",
+    "examples-build": "webpack -p --config=examples/webpack.config.js",
     "lint": "eslint src/",
     "prepublish": "npm run lint && npm run test && npm run compile",
     "test": "BABEL_ENV=development jest -ci",
