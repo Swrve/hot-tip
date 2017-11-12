@@ -1,11 +1,10 @@
 <div align="center">
   <a href="https://github.com/Swrve/hot-tip">
-    <img width="240" src="https://github.com/Swrve/hot-tip/blob/master/examples/hot-tip.png?raw=true">
+    <h1><img width="240" src="https://github.com/Swrve/hot-tip/raw/master/examples/Hot-Tip.png?raw=true" alt="HotTip"></h1>
   </a>
   <br>
-  <h1>HotTip</h1>
   <p>
-    A stress-free redux/react tooltip solution
+    HotTip - A stress-free redux/react tooltip solution
   <p>
 </div>
 
