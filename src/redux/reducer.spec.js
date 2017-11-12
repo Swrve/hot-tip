@@ -12,7 +12,7 @@ describe('Store', function() {
       describe('UPDATE_TOOLTIP', function() {
         beforeEach(function() {
           payload = {
-            text: 'tooltip',
+            tip: 'tooltip',
             visible: true,
             position: {
               anything: true
@@ -23,7 +23,7 @@ describe('Store', function() {
         it('spreads payload correctly', () => {
           const state = reducer({}, {type: types.UPDATE_TOOLTIP, payload})
 
-          expect(state.text).toEqual(payload.text)
+          expect(state.tip).toEqual(payload.tip)
           expect(state.visible).toEqual(payload.visible)
           expect(state.anything).toEqual(payload.position.anything)
         })
@@ -32,7 +32,7 @@ describe('Store', function() {
           const initialState = {anything: true},
             state = reducer(initialState, {type: 'unknown type', payload})
 
-          expect(state.text).not.toEqual(payload.text)
+          expect(state.tip).not.toEqual(payload.tip)
           expect(state.visible).not.toEqual(payload.visible)
           expect(state).toEqual(initialState)
         })

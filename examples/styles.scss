@@ -31,6 +31,36 @@ em {
   font-weight: 100;
 }
 
+.show-src,
+.hide-src {
+  background: $hot;
+  color: #fff;
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.hide-src {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  width: 100px;
+}
+
+.source {
+  position: relative;
+
+  pre {
+    border: 10px solid $hot;
+    color: #5a5a5a;
+    font-family: monospace;
+    line-height: 1.1;
+    padding: 40px;
+  }
+}
+
 .examples {
   margin: 30px auto;
   max-width: 800px;

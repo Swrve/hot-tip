@@ -9,13 +9,13 @@ describe('Store', function() {
 
       describe('addTooltip', function() {
 
-        it('called with text and position', () => {
-          const action = addTooltip('some text', {x: 1, y: 2})
+        it('called with tip and position', () => {
+          const action = addTooltip('some tip', {x: 1, y: 2})
 
           expect(action).toEqual({
             type: types.UPDATE_TOOLTIP,
             payload: {
-              text: 'some text',
+              tip: 'some tip',
               visible: true,
               position: {
                 x: 1,

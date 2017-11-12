@@ -1,24 +1,32 @@
-import React from 'react'
+import {Component, cloneElement} from 'react'
+import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import * as appActions from '../../redux/actions'
 import {getPosition, getBounds} from './utils'
 
 
-const HotTip = (props) => {
-  const handleMouseEnter = (e) => {
-      const bounds = getBounds(e),
-        position = getPosition(props.position)(bounds)
+class HotTip extends Component {
+  componentWillUnmount() {
+    this.props.dispatch(appActions.clearTooltip())
+  }
 
-      props.dispatch(appActions.addTooltip(props.text, position))
-    },
-    handleMouseLeave = () => {
-      props.dispatch(appActions.clearTooltip())
-    }
+  handleMouseEnter(e) {
+    const bounds = getBounds(e),
+      position = getPosition(this.props.position)(bounds)
 
-  return React.cloneElement(props.children, {
-    onMouseOver: handleMouseEnter,
-    onMouseOut: handleMouseLeave
-  })
+    this.props.dispatch(appActions.addTooltip(this.props.tip, position))
+  }
+
+  handleMouseOut() {
+    this.props.dispatch(appActions.clearTooltip())
+  }
+
+  render() {
+    return cloneElement(this.props.children, {
+      onMouseOver: (e) => this.handleMouseEnter(e),
+      onMouseOut: () => this.handleMouseOut()
+    })
+  }
 }
 
 HotTip.displayName = 'HotTip'
@@ -28,10 +36,10 @@ HotTip.defaultProps = {
 }
 
 HotTip.propTypes = {
-  children: React.PropTypes.node.isRequired,
-  dispatch: React.PropTypes.func.isRequired,
-  position: React.PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
-  text: React.PropTypes.string.isRequired
+  children: PropTypes.node.isRequired,
+  dispatch: PropTypes.func.isRequired,
+  position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
+  tip: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired
 }
 
 export default connect()(HotTip)

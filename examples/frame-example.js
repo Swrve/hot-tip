@@ -13,15 +13,15 @@ render((
       {/* Place this anchor as close to the root level of your app as possible */}
       {/* It relies on 'connect' so it must be within a react-redux provider component */}
       <div className="examples">
-        <HotTip text={longText} position="top"><div className="tip top-left">{'TOP'}</div></HotTip>
-        <HotTip text={longText} position="top"><div className="tip top-center">{'TOP'}</div></HotTip>
-        <HotTip text={longText} position="top"><div className="tip top-right">{'TOP'}</div></HotTip>
-        <HotTip text={longText} position="left"><div className="tip left">{'LEFT'}</div></HotTip>
-        <HotTip text={longText}><div className="tip center">{'DEFAULT'}</div></HotTip>
-        <HotTip text={longText} position="right"><div className="tip right">{'RIGHT'}</div></HotTip>
-        <HotTip text={longText}><div className="tip bottom-left">{'BOTTOM'}</div></HotTip>
-        <HotTip text={longText}><div className="tip bottom-center">{'BOTTOM'}</div></HotTip>
-        <HotTip text={longText}><div className="tip bottom-right">{'BOTTOM'}</div></HotTip>
+        <HotTip tip={longText} position="top"><div className="tip top-left">{'TOP'}</div></HotTip>
+        <HotTip tip={longText} position="top"><div className="tip top-center">{'TOP'}</div></HotTip>
+        <HotTip tip={longText} position="top"><div className="tip top-right">{'TOP'}</div></HotTip>
+        <HotTip tip={longText} position="left"><div className="tip left">{'LEFT'}</div></HotTip>
+        <HotTip tip={longText}><div className="tip center">{'DEFAULT'}</div></HotTip>
+        <HotTip tip={longText} position="right"><div className="tip right">{'RIGHT'}</div></HotTip>
+        <HotTip tip={longText}><div className="tip bottom-left">{'BOTTOM'}</div></HotTip>
+        <HotTip tip={longText}><div className="tip bottom-center">{'BOTTOM'}</div></HotTip>
+        <HotTip tip={longText}><div className="tip bottom-right">{'BOTTOM'}</div></HotTip>
       </div>
     </HotTipRoot>
   </Provider>

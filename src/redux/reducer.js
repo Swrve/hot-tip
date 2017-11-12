@@ -4,7 +4,7 @@ export function hotTipReducer(state = {}, {type, payload}) {
   switch (type) {
   case types.UPDATE_TOOLTIP:
     return Object.assign({}, state, {
-      text: payload.text,
+      tip: payload.tip,
       visible: payload.visible
     }, payload.position)
   default:

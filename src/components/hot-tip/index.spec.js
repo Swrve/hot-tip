@@ -16,7 +16,7 @@ describe('Components', function() {
 
     it('renders', () => {
       const component = renderer.create(
-          <HotTip store={store} text="click me"><a>{'link'}</a></HotTip>
+          <HotTip store={store} tip="click me"><a>{'link'}</a></HotTip>
         ),
         tip = component.toJSON()
 
@@ -29,7 +29,7 @@ describe('Components', function() {
       utils.getBounds = jest.fn((one) => ({one}))
       utils.getPosition = jest.fn((one) => (two) => ({one, two}))
       const component = renderer.create(
-        <HotTip store={store} text="click me"><a>{'link'}</a></HotTip>
+        <HotTip store={store} tip="click me"><a>{'link'}</a></HotTip>
       )
       let tip = component.toJSON()
 

@@ -1,10 +1,10 @@
 import * as types from './action-types'
 
-export function addTooltip(text, position) {
+export function addTooltip(tip, position) {
   return {
     type: types.UPDATE_TOOLTIP,
     payload: {
-      text,
+      tip,
       visible: true,
       position: Object.assign({}, position)
     }

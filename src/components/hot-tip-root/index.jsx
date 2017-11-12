@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import HotTipAnchor from '../hot-tip-anchor'
 
 const HotTipRoot = (props) => {
@@ -11,7 +12,7 @@ const HotTipRoot = (props) => {
 HotTipRoot.displayName = 'HotTipRoot'
 
 HotTipRoot.propTypes = {
-  children: React.PropTypes.element
+  children: PropTypes.element
 }
 
 export default HotTipRoot

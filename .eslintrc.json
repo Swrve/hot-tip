@@ -11,18 +11,18 @@
     "browser": true,
     "es6": true,
     "commonjs": true,
-    "jest": true
-  },
-  "globals": {
-    "expect": true,
-    "React": true
+    "jest": true,
+    "node": true
   },
   "plugins": [
     "babel",
     "react",
     "import"
   ],
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "rules": {
     "indent": [2, 2],
     "react/jsx-uses-react": 2,

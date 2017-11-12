@@ -1,6 +1,20 @@
 {
-  "presets": ["env", "react"],
-  "plugins": ["transform-react-jsx"],
+  "env": {
+    "development": {
+      "presets": ["env", "react"],
+      "plugins": [
+        "transform-react-jsx",
+        ["transform-es2015-modules-commonjs", { "loose": true }]
+      ]
+    },
+    "rollup": {
+      "presets": [
+        ["env", {"modules": false}],
+        "react",
+      ],
+      "plugins": ["transform-react-jsx", "external-helpers"]
+    }
+  },
   "ignore": [
     "node_modules/*"
   ]
