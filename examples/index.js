@@ -31,7 +31,7 @@ render((
           <HotTip tip="Right" position="right"><em>{'Right'}</em></HotTip>{', and '}
           <HotTip tip="Bottom (default)"><em>{'Bottom'}</em></HotTip>{'.'}
         </p>
-        <h2><i className="fa fa-plus-square"/>{' Extra Long tips'}</h2>
+        <HotTip><h2><i className="fa fa-plus-square"/>{' Extra Long tips'}</h2></HotTip>
         <p>
           {'There is a maximum width of 200px for a tooltip. Overflow and wrapping is handled differently for each position '}
           <HotTip tip={longText} position="top"><em>{'Top'}</em></HotTip>{', '}

@@ -22,10 +22,13 @@ class HotTip extends Component {
   }
 
   render() {
-    return cloneElement(this.props.children, {
-      onMouseOver: (e) => this.handleMouseEnter(e),
-      onMouseOut: () => this.handleMouseOut()
-    })
+    if(this.props.tip) {
+      return cloneElement(this.props.children, {
+        onMouseOver: (e) => this.handleMouseEnter(e),
+        onMouseOut: () => this.handleMouseOut()
+      })
+    }
+    return this.props.children
   }
 }
 
@@ -39,7 +42,7 @@ HotTip.propTypes = {
   children: PropTypes.node.isRequired,
   dispatch: PropTypes.func.isRequired,
   position: PropTypes.oneOf(['top', 'bottom', 'left', 'right']).isRequired,
-  tip: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired
+  tip: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
 }
 
 export default connect()(HotTip)
