@@ -94,4 +94,4 @@ Licence & Contribute
 
 HotTip is on MIT so can be used anywhere with almost no restrictions.
 
-To contribute please read the [CONTRIBUTE](CONTRIBUTE.md) file.
+To contribute please read the [CONTRIBUTING](CONTRIBUTING.md) file.
