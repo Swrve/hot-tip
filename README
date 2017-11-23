@@ -38,15 +38,15 @@ Why HotTip?
 
 We weren't happy with tooltip solutions that looked like react components but under the cover used the DOM api directly (or heaven forbid jQuery). HotTip
 
- ✅ &nbsp; Using React & Redux? HotTip's only dependencies are react, redux and react-redux
+  * Using React & Redux? HotTip's only dependencies are react, redux and react-redux
 
- ✅ &nbsp; HotTip plugs directly into your application state, you'll never need to force a redraw
+  * HotTip plugs directly into your application state, you'll never need to force a redraw
 
- ✅ &nbsp; HotTip does only one thing, it positions and displays tooltips
+  * HotTip does only one thing, it positions and displays tooltips
 
- ✅ &nbsp; Positioning is responsive, if you're close to frame boundaries HotTip responds in a predictable way (see examples)
+  * Positioning is responsive, if you're close to frame boundaries HotTip responds in a predictable way (see examples)
 
- ✅ &nbsp; HotTip bundles in at about 40kb (10kb compressed)
+  * HotTip bundles in at about 40kb (10kb compressed)
 
 Positioning
 ---------------------------------
@@ -93,4 +93,6 @@ import Hover from 'hot-tip'
 Licence & Contribute
 ---------------------------------
 
-HotTip is on MIT so can be used anywhere with almost no restrictions. Credit is always appreciated. Fork and open a pull request to help improve the package.
+HotTip is on MIT so can be used anywhere with almost no restrictions.
+
+To contribute please read the [CONTRIBUTE]('CONTRIBUTE') file.
