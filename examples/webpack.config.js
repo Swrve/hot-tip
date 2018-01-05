@@ -37,7 +37,7 @@ module.exports = {
     hotTip: ['./src/index.js', './src/styles.scss']
   },
   output: {
-    path: path.resolve(__dirname, '../docs'),
+    path: path.resolve(__dirname, '../'),
     filename: '[NAME].bundle.js',
     publicPath: '/'
   },
