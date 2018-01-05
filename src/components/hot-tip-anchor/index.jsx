@@ -8,8 +8,8 @@ const HotTipAnchor = (props) => {
 
   return Boolean(visible) && (
     <div className={className} style={{top: y, left: x}}>
-      <div className="pointer"/>
-      <div className="body">
+      <div className="ht-point"/>
+      <div className="ht-body">
         {isText ? tip : tip()}
       </div>
     </div>

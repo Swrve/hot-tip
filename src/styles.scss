@@ -12,12 +12,12 @@
   z-index: 999;
   transform-origin: top;
 
-  .pointer {
+  .ht-point {
     border: $ht-pointer-width solid transparent;
     position: absolute;
   }
 
-  .body {
+  .ht-body {
     background-color: $ht-background-color;
     font-weight: 300;
     font-size: $ht-font-size;
@@ -35,11 +35,11 @@
     margin-left: -100px;
     text-align: center;
 
-    .pointer {
+    .ht-point {
       left: calc(50% - #{$ht-pointer-width});
     }
 
-    .body {
+    .ht-body {
       text-align: center;
     }
   }
@@ -48,11 +48,11 @@
     margin-left: -20px;
     text-align: left;
 
-    .pointer {
+    .ht-point {
       left: 15px;
     }
 
-    .body {
+    .ht-body {
       min-width: 30px;
     }
   }
@@ -61,18 +61,18 @@
     margin-left: -180px;
     text-align: right;
 
-    .pointer {
+    .ht-point {
       right: 15px;
     }
 
-    .body {
+    .ht-body {
       min-width: 30px;
       text-align: right;
     }
   }
 
   &.bottom {
-    .pointer {
+    .ht-point {
       border-bottom: $ht-pointer-length solid $ht-background-color;
       top: -$ht-pointer-width;
     }
@@ -81,7 +81,7 @@
   &.top {
     transform: translateY(calc(-100% - #{$ht-pointer-width}));
 
-    .pointer {
+    .ht-point {
       border-top: $ht-pointer-length solid $ht-background-color;
       bottom: -$ht-pointer-width - $ht-pointer-length;
     }
@@ -96,11 +96,11 @@
       transform: translate($ht-translate-x-left, -50%);
     }
 
-    .pointer {
+    .ht-point {
       top: calc(50% - #{$ht-pointer-width});
     }
 
-    .body {
+    .ht-body {
       text-align: center;
     }
   }
@@ -112,11 +112,11 @@
       transform: translate($ht-translate-x-left, -20px);
     }
 
-    .pointer {
+    .ht-point {
       top: 15px;
     }
 
-    .body {
+    .ht-body {
       min-height: 30px;
     }
   }
@@ -128,11 +128,11 @@
       transform: translate($ht-translate-x-left, calc(-100% + 20px));
     }
 
-    .pointer {
+    .ht-point {
       bottom: 15px;
     }
 
-    .body {
+    .ht-body {
       min-height: 30px;
     }
   }
@@ -140,7 +140,7 @@
   &.left {
     text-align: right;
 
-    .pointer {
+    .ht-point {
       border-left: $ht-pointer-length solid $ht-background-color;
       right: -$ht-pointer-width - $ht-pointer-length;
     }
@@ -149,7 +149,7 @@
   &.right {
     margin-left: $ht-pointer-width;
 
-    .pointer {
+    .ht-point {
       border-right: $ht-pointer-length solid $ht-background-color;
       left: -$ht-pointer-width - $ht-pointer-length;
     }
