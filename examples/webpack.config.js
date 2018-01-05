@@ -1,3 +1,4 @@
+const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -36,7 +37,7 @@ module.exports = {
     hotTip: ['./src/index.js', './src/styles.scss']
   },
   output: {
-    path: __dirname + '/lib',
+    path: path.resolve(__dirname, '../docs'),
     filename: '[NAME].bundle.js',
     publicPath: '/'
   },
