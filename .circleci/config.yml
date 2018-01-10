@@ -22,10 +22,6 @@ jobs:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
 
-      - run:
-          name: install yarn
-          command: 'sudo npm install -g yarn'
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -41,17 +37,21 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run linter
-      - run: echo "Checking linter"
-      - run: npm run lint
+      - run:
+          name: Check for lint
+          command: npm run lint
 
       # run tests!
-      - run: echo "Checking tests"
-      - run: npm test
+      - run:
+          name: Check tests
+          command: npm test
 
       # run compilation!
-      - run: echo "Running package compilation"
-      - run: npm run compile
+      - run:
+          name: Run package compilation
+          command: npm run compile
 
       # try build examples!
-      - run: echo "Checking examples compile"
-      - run: npm run examples-build
+      - run:
+          name: Build examples
+          command: npm run examples-build
