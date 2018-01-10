@@ -29,10 +29,10 @@ jobs:
 
       - run:
           name: Ensure node-sass installed
-          steps:
-            - run: echo "ls node_modules/node-sass/vendor"
-            - run: yarn add --dev node-sass@4.7.2
-            - run: echo "ls node_modules/node-sass/vendor"
+          command: |
+            echo "ls node_modules/node-sass/vendor"
+            yarn add --dev node-sass@4.7.2
+            echo "ls node_modules/node-sass/vendor"
 
       - save_cache:
           paths:
