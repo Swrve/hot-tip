@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
+      - image: circleci/node:7
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -18,6 +18,9 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: update-npm & install yarn
+          command: 'sudo npm install -g npm@latest && sudo npm install -g yarn'
 
       # Download and cache dependencies
       - restore_cache:
@@ -26,7 +29,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install --ignore-scripts
 
       - save_cache:
           paths:
@@ -35,16 +38,16 @@ jobs:
 
       # run linter
       - run: echo "Checking linter"
-      - run: yarn run lint
+      - run: npm run lint
 
       # run tests!
       - run: echo "Checking tests"
-      - run: yarn test
+      - run: npm test
 
       # run compilation!
       - run: echo "Running package compilation"
-      - run: yarn run compile
+      - run: npm run compile
 
       # try build examples!
       - run: echo "Checking examples compile"
-      - run: yarn run examples-build
+      - run: npm run examples-build
