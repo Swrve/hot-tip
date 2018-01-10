@@ -6,6 +6,9 @@
   <p>
     HotTip - A stress-free redux/react tooltip solution
   <p>
+  [![CircleCI](https://circleci.com/gh/Swrve/hot-tip.svg?style=shield)](https://circleci.com/gh/Swrve/hot-tip)
+  [![npm version](https://badge.fury.io/js/hot-tip.svg)](https://badge.fury.io/js/hot-tip)
+  [![npm](https://img.shields.io/npm/dm/hot-tip.svg)](https://github.com/Swrve/hot-tip)
 </div>
 
 Install
