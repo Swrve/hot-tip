@@ -25,14 +25,14 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install --ignore-scripts
-
       - run:
-          name: Ensure node-sass installed
-          command: |
-            echo "ls node_modules/node-sass/vendor"
-            yarn add --dev node-sass@4.7.2
-            echo "ls node_modules/node-sass/vendor"
+        name: Ensure node-sass installed
+        command: |
+        echo "ls node_modules/node-sass/vendor"
+        npm install -D node-sass@4.7.2 --ignore-scripts
+        echo "ls node_modules/node-sass/vendor"
+
+      - run: yarn install --ignore-scripts
 
       - save_cache:
           paths:
