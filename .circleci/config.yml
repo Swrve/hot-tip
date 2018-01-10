@@ -26,15 +26,15 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: Ensure node-sass installed
-          command: |
-              echo "ls node_modules/node-sass/vendor"
-              npm install -D node-sass@4.7.2 --ignore-scripts
-              echo "ls node_modules/node-sass/vendor"
-
-      - run:
           name: install packages
           command: yarn install --ignore-scripts
+
+      - run:
+          name: Ensure node-sass installed
+          command: |
+              ls node_modules/node-sass
+              npm rebuild node-sass
+              ls node_modules/node-sass
 
       - save_cache:
           paths:
