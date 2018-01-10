@@ -28,9 +28,9 @@ jobs:
       - run:
         name: Ensure node-sass installed
         command: |
-        echo "ls node_modules/node-sass/vendor"
-        npm install -D node-sass@4.7.2 --ignore-scripts
-        echo "ls node_modules/node-sass/vendor"
+          echo "ls node_modules/node-sass/vendor"
+          npm install -D node-sass@4.7.2 --ignore-scripts
+          echo "ls node_modules/node-sass/vendor"
 
       - run: yarn install --ignore-scripts
 
