@@ -32,9 +32,9 @@ jobs:
       - run:
           name: Ensure node-sass installed
           command: |
-              ls node_modules/node-sass/vendor
+              ls node_modules/node-sass
               npm rebuild node-sass
-              ls node_modules/node-sass/vendor
+              ls node_modules/node-sass
 
       - save_cache:
           paths:
