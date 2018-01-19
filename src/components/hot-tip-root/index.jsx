@@ -12,7 +12,7 @@ const HotTipRoot = (props) => {
 HotTipRoot.displayName = 'HotTipRoot'
 
 HotTipRoot.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.node
 }
 
 export default HotTipRoot

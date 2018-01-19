@@ -28,7 +28,7 @@ HotTipAnchor.propTypes = {
   y: PropTypes.number
 }
 
-const mapStateToProps = (state) => Object.assign({},
+const mapStateToProps = (state = {hotTipReducer: {}}) => Object.assign({},
   state.hotTipReducer, {
     isText: Boolean(state.hotTipReducer.tip && state.hotTipReducer.tip.trim)
   })

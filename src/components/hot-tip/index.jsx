@@ -1,4 +1,4 @@
-import {Component, cloneElement} from 'react'
+import {Component, cloneElement, createElement, Children} from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import * as appActions from '../../redux/actions'
@@ -22,7 +22,15 @@ class HotTip extends Component {
   }
 
   render() {
-    if(this.props.tip) {
+    const {tip, children} = this.props
+
+    if(tip) {
+      if (typeof children === 'string') {
+        return createElement('span', {
+          onMouseOver: (e) => this.handleMouseEnter(e),
+          onMouseOut: () => this.handleMouseOut()
+        }, children)
+      }
       return cloneElement(this.props.children, {
         onMouseOver: (e) => this.handleMouseEnter(e),
         onMouseOut: () => this.handleMouseOut()

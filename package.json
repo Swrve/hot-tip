@@ -1,6 +1,6 @@
 {
   "name": "hot-tip",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A stress-free redux/react tooltip solution",
   "main": "lib/index.js",
   "module": "es/hot-tip.js",
